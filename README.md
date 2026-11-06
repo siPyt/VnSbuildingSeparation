@@ -8,7 +8,7 @@ V and N buildings go to NewCo; S stays with RemainCo. Target: a separate generat
 | File | What it is |
 |---|---|
 | [PROJECT_STATUS.txt](PROJECT_STATUS.txt) | Running status, confirmed findings, assumptions, open questions, and next steps |
-| [DRAWING_ANSWERS.txt](DRAWING_ANSWERS.txt) | Direct answers supported by the reviewed plant one-lines, with sheet/page citations and drawing conflicts |
+| [DRAWING_ANSWERS.txt](DRAWING_ANSWERS.txt) | Direct answers supported by the reviewed plant one-lines and site plan, with sheet/page citations and drawing conflicts |
 | [SV_Emergency_Power_Separation_DRAFT.md](SV_Emergency_Power_Separation_DRAFT.md) | How S/V and N are tied together now, concept one-lines, phased scope, code checklist, data still needed |
 | [SV_Emergency_Load_List_and_Sizing.xlsx](SV_Emergency_Load_List_and_Sizing.xlsx) | Load list, generator/ATS sizing, circuit move list (yellow cells = inputs) |
 
@@ -16,7 +16,8 @@ V and N buildings go to NewCo; S stays with RemainCo. Target: a separate generat
 
 | File | Dwg No. | Title |
 |---|---|---|
-| [MSOL-combined (1).pdf](<MSOL-combined (1).pdf>) | 71-sheet combined set, drawing numbers range 15-039-E025–E107 | Plant one-lines, including S/V normal-power references and N standby generator/ATS drawings; see [DRAWING_ANSWERS.txt](DRAWING_ANSWERS.txt) |
+| [MSOL-combined (1).pdf](<MSOL-combined (1).pdf>) | 71-sheet combined set, drawing numbers range 15-039-E025–E107 | Plant one-lines, including S/V normal-power references and N standby generator/ATS drawings. E074, E076, E099, E101, E108–E111 and some other numbers are not in the set; see [DRAWING_ANSWERS.txt](DRAWING_ANSWERS.txt) |
+| [CherokeeSiteElect.pdf](CherokeeSiteElect.pdf) | 15-039-E001 | Cherokee Plant Electrical Site Location Plan, revision 4 (06-16-26, "Generator docking station as-builts"). Its own general note says not as-built; buildings are not lettered; building north is up the page and true north points toward the upper left |
 | [18-2038-E-50+SINGLE+LINE+DIAGRAM.PDF](18-2038-E-50+SINGLE+LINE+DIAGRAM.PDF) | 18-2038-E-50 | ADC Clinical Expansion single line (DP-10, ATS07, PAN10/PAN11, UPS 3PS-0002) |
 | [DP_5A.PDF](DP_5A.PDF) | 0001-E64 | DP-5A Electrical Room #1023 one-line |
 | [N3ADCeastBayThirdFloor_power.PDF](N3ADCeastBayThirdFloor_power.PDF) | 10-055-E100 | N3 ADC electrical plan, east bay, 3rd floor (ESG01, ATSs, SPP/SRP/PP/RP) |
@@ -30,4 +31,8 @@ V and N buildings go to NewCo; S stays with RemainCo. Target: a separate generat
 | [DeltaV/plantLANSwitch.PDF](DeltaV/plantLANSwitch.PDF) | 04-073-E101 | Plant LAN switch, Office N3039 |
 | [DeltaV/DeltaV_Device_Register.docx](DeltaV/DeltaV_Device_Register.docx) | | Device register. **Contains errors; don't rely on it.** |
 
-The combined MSOL set contains S/V normal-power feeder references (15-039-E073, E077, and E078). It does not, in the reviewed sheets, establish the S/V emergency-power arrangement. See [DRAWING_ANSWERS.txt](DRAWING_ANSWERS.txt) for findings and limitations.
+The combined MSOL set contains S/V normal-power feeder references (15-039-E073, E077, and E078). It does not, in the reviewed sheets, establish the S/V emergency-power arrangement. It does carry a lead: E073 and E028 point to ATS08 and ATS10 of a generator tagged 3GEN-002N, whose ATS sheets (E099, E101) are not in the set, and E001 has a 3GEN-002N leader to a generator-type unit beside SWBD #6. These are leads, not an established S/V emergency arrangement. E028 and E058 also show normal-power feeds running from N to panels labeled for S. See [DRAWING_ANSWERS.txt](DRAWING_ANSWERS.txt) for findings and limitations.
+
+## Reading these PDFs
+
+The sheet labels in the MSOL set and in CherokeeSiteElect.pdf are stored as PDF annotations, so normal text extraction returns nothing. Read them with PyMuPDF: `import pymupdf`, then `page.annots()` and `annot.info["content"]` (position from `annot.rect`). PDF page numbers cited in these files are 1-based.

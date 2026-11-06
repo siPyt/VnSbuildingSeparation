@@ -1,11 +1,17 @@
 DRAWING-BASED ANSWERS
-Cherokee plant | Prepared 2026-11-06
+Cherokee plant | Prepared 2026-11-06 | Updated 2026-11-06 for site plan E001
 
 PURPOSE
 Use this as a factual briefing from the drawings reviewed so far. It is an
 answer sheet, not a list of questions to take back to the project team. State
 what a drawing shows, cite the sheet, and distinguish it from field-verified
 conditions. These drawings are not certified as-builts.
+
+Sources: the 71-page MSOL set (MSOL-combined (1).pdf, drawings 15-039-E025 to
+E107), the separate 18-2038-E-50 single line, and the one-page site plan
+15-039-E001 (CherokeeSiteElect.pdf). The labels in these PDFs are stored as
+annotation text; they were read from that text and checked against the
+rendered sheets. PDF page numbers are 1-based.
 
 THE SHORT ANSWER
 The one-lines show S and V on the same upstream normal-power system: 3XFMR-0021
@@ -16,24 +22,52 @@ establish that S and V share emergency generation. The 750kW generator
 shown in the set is 3GEN-0015, whose ESG01 board feeds multiple N-building ATSs;
 the reviewed sheets do not show it feeding S or V.
 
+The drawings do carry one specific lead to an emergency source at S/V: a
+generator tagged 3GEN-002N. SWBD #6 has an 800A branch "TO 3GEN-002N-ATS08"
+(E073), and panel 3PAN-0378 in the room labeled "BUILDING S MEZZANINE" has a
+60A branch "TO 3GEN-002N-ATS10" (E028). On the site plan (E001, revision 4), a
+3GEN-002N leader points to a generator-type unit in the yard, with CAM LOK BOX
+#1 and #2 leaders to the same unit, beside the SWBD#6 and 3XFMR-0021
+footprints. The ATS sheets (E099, E101) are not in the set and the generator
+sheets (E102, E103) are blank placeholders. What 3GEN-002N serves, its rating,
+and whether it is the S/V emergency source are therefore not established.
+
+In this set, the normal-power links drawn between the N and S systems run from
+N to S: DP-5 feeds the S mezzanine panel 3PAN-0378 (E028), and N's SWBD #5 has
+a breaker marked "TO FUTURE 125A PANEL S BLDG" (E058). If ATS08 and ATS10 share
+one generator (the set's tag convention suggests they do, but no sheet shows
+it), that generator would tie the SWBD #6 system (S/V) to the DP-5 system (N).
+None of this is field verified.
+
 ANSWERS SUPPORTED BY THE DRAWINGS
 
 1. S AND V NORMAL-POWER ARRANGEMENT
-   Drawing 15-039-E073 (PDF page 49) shows 3XFMR-0021, rated 1500kVA, supplying
-   SWBD #6, shown as 2000A minimum at 480/277V. The board has a 200A feeder to
-   Building V (continuation 15-039-E078). The branch toward Building S
+   Drawing 15-039-E073 (PDF page 49) shows 3XFMR-0021, rated 1500kVA (4.16kV
+   delta primary, pad mounted), supplying SWBD #6, a new 480/277V, 4-wire
+   switchboard labeled 2000A with 100kAIC minimum. The board has a 200A feeder
+   to Building V (continuation 15-039-E078). The branch toward Building S
    (continuation 15-039-E076) is labeled 800A, 3-pole, with 300A also shown at
    the protective device. Report both markings as drawn; do not describe the
    branch as 800A of usable capacity. The drawings show separate building
    feeders downstream of a common transformer/switchboard. That is a common
    normal source, not proof of a shared emergency source.
+   The same sheet shows SWBD #6 also feeding: an 800A branch "TO
+   3GEN-002N-ATS08" (continuation E099; see answer 9); an 800A-device branch
+   "TO BLDG P" with 600A also shown (continuation E074); a spare 800A position;
+   a 60A branch to 3SPD-0002; and future sections marked for 800A and 200A
+   fused switches. Sheet E078 (PDF page 52) says SWBD #6 is "within Bldg P".
+   E073's primary-side note points to E084 for the "plant overhead electrical
+   service," but E084 (the 3XFMR-0001 / SWBD PP-T sheet) does not draw
+   3XFMR-0021, so the upstream source of 3XFMR-0021 is not traced in this set.
+   Drawing E075 (PDF page 50), titled "Service Transformer 3XFMR-0021," is a
+   blank "future one line diagram" placeholder.
 
 2. V-BUILDING NORMAL DISTRIBUTION
    Drawing 15-039-E078 (PDF page 52) shows the SWBD #6 feeder serving panel
-   3PAN-V-0001 / DP-1, rated 200A, 480/277V, 3-phase, 4-wire. The listed
-   downstream loads include AHUs, cooling units, lighting, and general building
-   loads. This sheet shows normal distribution; it does not identify a V
-   generator or emergency ATS.
+   3PAN-V-0001 / DP-1, rated 200A, 480/277V, 3-phase, 4-wire, 25kAIC, and a
+   45kVA 3XFMR-V-0001 (480V to 208/120V). The listed downstream loads include
+   AHUs, cooling units, lighting, and general building loads. This sheet shows
+   normal distribution; it does not identify a V generator or emergency ATS.
 
 3. S-BUILDING NORMAL DISTRIBUTION
    Drawing 15-039-E073 routes a branch to Building S via drawing 15-039-E076.
@@ -43,14 +77,22 @@ ANSWERS SUPPORTED BY THE DRAWINGS
    3PAN-XXX1, rated 225A, 480/277V, 3-phase, 4-wire. Its listed loads include
    machine-shop equipment, an AHU, receptacles, a battery charger, and other
    building loads. The missing E076 sheet prevents a complete trace of the
-   feeder and upstream S distribution from this PDF alone.
+   feeder and upstream S distribution from this PDF alone. E077 carries
+   placeholder tags (3PAN-XXX1, and a continuation "TO 3PAN-XXXX" on E076), so
+   the S panel's actual tag is not given. A different S-labeled panel,
+   3PAN-0378 (3-wire, no neutral), appears on E028; see answer 10.
 
-4. S/V EMERGENCY POWER IS NOT ESTABLISHED BY THESE SHEETS
-   The S/V sheets cited above establish their normal-power arrangement, but do
-   not show an S/V shared generator or emergency ATS. The previously reported
-   shared S/V emergency arrangement remains unverified against the supplied
-   drawings. Do not equate the common normal source with a common standby
-   source.
+4. S/V EMERGENCY POWER: ONE DRAWN LEAD, NOT ESTABLISHED
+   E077 (S) and E078 (V) show normal distribution and do not identify a
+   generator or emergency ATS, and no sheet in the set draws a shared S/V
+   generator or an ATS load side. The one drawn lead is the 3GEN-002N tag: E073
+   sends an 800A branch from SWBD #6 "TO 3GEN-002N-ATS08" (continuation E099),
+   and E028 sends a 60A branch from 3PAN-0378 "TO 3GEN-002N-ATS10"
+   (continuation E101). Both continuation sheets are absent, and the
+   3GEN-002N generator sheets (E102, E103) are blank placeholders. See answer
+   9. The previously reported shared S/V emergency arrangement therefore
+   remains unverified against the supplied drawings. Do not equate the common
+   normal source with a common standby source.
 
 5. BUILDING N STANDBY GENERATOR
    Drawing 15-039-E062 (PDF page 38) identifies 3GEN-0015 as a 750kW standby
@@ -67,63 +109,330 @@ ANSWERS SUPPORTED BY THE DRAWINGS
    load side feeds panel SPP-N3-EB. This is N-system evidence, not evidence
    that the N generator serves S or V.
 
-7. ATS07 SOURCE CONFLICT
+7. ATS07 SOURCE AND RATING CONFLICT
    The drawings conflict:
-   - 15-039-E068 (PDF page 44) shows ATS07's normal source as DP-10 and its
-     emergency source as 3GEN-0015-ESG01. It labels ATS07 1000A at 480V,
-     3-phase, 3-wire, 3-pole, and "not a Level 1" transfer switch. The shown
-     emergency panel supplies loads including AHU/exhaust equipment and UPS
-     distribution.
+   - 15-039-E068 (PDF page 44) shows ATS07's normal source as DP-10 (E047) and
+     its emergency source as 3GEN-0015-ESG01 (E062). It labels ATS07 100A at
+     480V, 3-phase, 3-wire, 3-pole, and "not a Level 1" transfer switch. The
+     shown emergency panel (3GEN-0015-PAN10, a "new emergency power panel" in
+     the roof electrical penthouse) has 100AF breakers and supplies loads
+     including AHU/exhaust equipment and UPS distribution. E068's title block
+     still reads "STAND-BY GENERATOR / FUTURE ONE LINE DIAGRAM" although the
+     body is the ATS07 one-line.
    - 18-2038-E-50, "ADC Clinical Expansion Single Line Diagram," labels ATS07
      150A at 480V, 3-phase, 3-wire, with emergency power from an existing
      portable generator provided by others and located by the existing
-     exterior generator. The feeder branch to ATS07 on 15-039-E062 also has
-     400A and 150A markings.
+     exterior generator. The feeder breaker to ATS07 on 15-039-E062 is marked
+     400AF / 150AT (identified by position), which matches E-50's 150A rather
+     than E068's 100A.
    The drawings conflict on both ATS07's emergency source and rating. They
    alone do not reconcile whether this reflects revisions, separate equipment,
    or a field change. Report both references and do not declare the current
    source or rating until the ATS identity and installation are checked.
+   (Earlier versions of this sheet gave E068's rating as 1000A; that was a
+   transcription error. See CORRECTIONS below.)
+
+8. SITE PLAN E001: WHAT IT IS AND ITS LIMITS
+   Drawing 15-039-E001 (CherokeeSiteElect.pdf, one page, ANSI E, 1"=30'-0") is
+   the "Cherokee Plant Electrical Site Location Plan" (MilliporeSigma). Drawn
+   RCE 04-30-15, approved CK 05-31-15. Revisions: 2, "Update via field
+   observation" (SN, 11-15-22); 3, "Updated per CC 4944226 & 4792677" (BS,
+   10-02-25); 4, "Generator docking station as-builts" (RU, 06-16-26). It
+   locates the switchboards and their transformers (callouts such as
+   "3XFMR-0021 SWBD 6"), the 3SW-0700 primary switchgear, 3ESG-0700, 3HRG-0700,
+   3SWBD-0008, 3SWBD-0009, generator units and cam-lok boxes, three "AMEREN
+   4.16kV METER POLE" labels, a wall-mounted Ameren 480V meter, and the fire
+   pump house. Limits as drawn:
+   - Buildings are not lettered. The only area or building labels are BUILDING
+     XY, TANK FARM, BLDG T VALVE HOUSE, and two GUARD SHACKs. Equipment
+     callouts use leader arrows to unlabeled footprints, and the sheet does not
+     define what a leader points to. E001 cannot by itself show which
+     footprint is S, V, or N.
+   - Orientation: BUILDING NORTH is up the page, and the TRUE NORTH arrow
+     points toward the upper left, about 45 degrees counter-clockwise from
+     building north. This file describes places on E001 by page position
+     (left, lower middle, and so on), not by compass direction.
+   - Some callouts have several leaders. "3XFMR-0021 SWBD 6" has four, ending
+     in four unlabeled footprints in the middle of the plan; "3XFMR-0022 SWBD
+     2" has two. One leader from each ends inside the same large rectangular
+     outline just right of the plan's center. The sheet does not say whether
+     such leaders mark equipment location or areas served, so this is a lead
+     for the site walk, not a finding.
+   - General note 1 says the drawings are "NOT TO BE CONSIDERED AS-BUILT OR
+     AS-RECORDED" and that modifications must be field verified; notes 2 to 4
+     say conduit sizes, ground-conductor sizes, and motor/starter data are
+     estimated only. Revision 4 is titled "as-builts." Report both; neither
+     establishes field condition.
+   - The keynotes for the docking-station area cite "DETAIL 5 BELOW" for the
+     grounding electrode system; no detail 5 is on the supplied sheet.
+
+9. 3GEN-002N: THE DRAWN S/V EMERGENCY-SOURCE LEAD
+   The tag appears in four places:
+   - E073 (PDF p. 49): an SWBD #6 branch, 800A 3-pole with 800A also shown,
+     2-3"C 3#500kcmil, 1#3/0 neutral, 1#1/0 GND, "TO 3GEN-002N-ATS08 FOR
+     CONTINUATION SEE DRAWING 15-039-E099."
+   - E028 (PDF p. 4): breaker 1 of panel 3PAN-0378 (room labeled "BUILDING S
+     MEZZANINE"), 60A 3-pole with 60A also shown, 1"C 3#4, #8 GND, "TO
+     3GEN-002N-ATS10 FOR CONTINUATION SEE DRAWING 15-039-E101." 3PAN-0378 is
+     fed from DP-5 (answer 10).
+   - E102 and E103 (PDF pp. 68-69): titled "GENERATOR 3GEN-002N / FUTURE ONE
+     LINE DIAGRAM." Both are blank ("PAGE LEFT BLANK INTENTIONALLY"), building
+     field "X/Y," drawn 04-30-15, approved 05-31-15.
+   - E001: two "3GEN-002N" labels. One has a leader to a generator-type unit in
+     the yard beside the pad-mounted 3XFMR-0021 and SWBD#6, with CAM LOK BOX #1
+     and #2 pointing to it. The other, at the left side of the plan, has a long
+     leader to a footprint the sheet does not identify.
+   Both feeders carry the same revision note: E073 revision 1 is "Issued for
+   construction project 19-2019" (08-26-19) and E028 revision 1 is "Issued for
+   construction project 19-2019 - Phase C" (05-04-20).
+   Inference, not shown by any sheet: ATS tags in this set are prefixed with
+   the generator they transfer to (3GEN-0015-ATS01 and so on; 3GEN-0003-ATS01
+   to ATS04 on E058). By that convention 3GEN-002N-ATS08 and 3GEN-002N-ATS10
+   would both be on generator 3GEN-002N, and E099 and E101 would be their
+   one-lines. In the N-generator pattern (E063, E067, E068, E069) each ATS
+   sheet continues to the generator switchboard (E062) and to a normal-source
+   board, so E099 and E101 would be expected to do the same. If so, that
+   generator would take normal-source feeds from two systems: SWBD #6 (S/V,
+   via 3XFMR-0021) and 3PAN-0378 (fed from N's SWBD #2 via DP-5).
+   Not established by the set: the generator's rating, fuel, and location; what
+   ATS08 and ATS10 serve; and whether 3GEN-002N is the S/V emergency source.
+   Do not confuse 3GEN-002N-ATS08 with 3GEN-0015-ATS08 (E058, E059).
+
+10. N-TO-S NORMAL-POWER TIES AS DRAWN
+   - E028 (PDF p. 4, "3XFMR-0022 / DP-5 One Line Diagram"; revision 2,
+     "Updated via field observation," 11-15-22): DP-5 (800A, 480V, 3-wire,
+     100kAIC; in the room labeled BUILDING N; fed from SWBD #2 per E027) has
+     breaker 2, 200A with 200A also shown, 2"C 3#3/0, 1#6 GND, to panel
+     3PAN-0378 (225A, 480V, 3-wire, 100,000AIC) in the room labeled BUILDING S
+     MEZZANINE. 3PAN-0378 serves 3AHU-0042 (100A), an overhead speed door
+     3OD-0031 (30A), and the 60A 3GEN-002N-ATS10 feeder; its other positions
+     are spares or a space.
+   - E058 (PDF p. 34): 3PAN-0055 (800A, 480/277V, 65kAIC; added by revision 2,
+     12-12-24) is fed from SWBD #5 (3XFMR-0030). Its breaker 4 (125A, 3-pole)
+     is labeled "TO FUTURE 125A PANEL S BLDG"; breaker 1 (400A) goes to NMCC-A
+     (E059).
+   The sheets do not define "S BLDG" and nothing here shows what exists in the
+   field. If these labels mean the Building S that stays with RemainCo and are
+   current, S has normal-power dependencies on N distribution that goes to
+   NewCo. A scan of the full set found no N sheet that references 3XFMR-0021 or
+   SWBD #6.
+
+11. 3GEN-0003 DOCKING STATION AND FIRE PUMP HOUSE
+   E001 revision 4 ("Generator docking station as-builts") draws, in the lower
+   middle of the plan beside the fire pump house: an electrical platform with
+   catwalk carrying 3SWBD-0009 and 3GEN-0003-SWBD01 ("BOTTOM FED"); a cable
+   tray "below electrical platform" to a 3GEN-0003 footprint, with cable labels
+   "(4 SETS),(4)#500,(1)#400G,CU ON CABLE TRAY" and "(8) 4", (4)#500, (1)#400G,
+   CU"; a 36"x36"x36" splice box "with Polaris lugs for future cam lock box tie
+   in"; a 3GEN-0003-CLB01 label; and a 10"x10" box for ATS controls (labeled
+   "NEA 3R," presumably NEMA 3R).
+   The keynotes cover the grounding electrode system, the catwalk-to-generator
+   mechanical connection as the grounding bond, bonding jumpers coordinated
+   with the cable-tray manufacturer, and 90-degree elbows with grounding
+   bushings into the bottom of the switchboard. The sheet does not say what
+   generator, if any, is permanently installed at 3GEN-0003.
+   Normal power as drawn (E058, PDF p. 34; E107, PDF p. 71): Ameren service to
+   3SWBD-0008 (shared with N's SWBD #5; answer 12), then 3XFMR-0034 (2000kVA),
+   3XFMR-0034-DS01 (3000A), and 3SWBD-0009 (3000A, 480/277V, 65kAIC, main
+   breaker with ground-fault protection). E058 labels the platform "EXTERIOR
+   S-DOCK PLATFORM"; "S-Dock" is not defined, so do not read it as Building S.
+   SWBD #9 breakers go to 3GEN-0003-ATS01 (400A, E108), ATS02 (400A, E109),
+   ATS03 (1000A, E110), and ATS04 (400A, E111); those sheets are not in the
+   set, so the loads served are unknown. Two more breakers (1000A, 400A) show
+   no destination.
+   Fire pump house: E001 shows a fire pump controller, a jockey pump
+   controller, a fire pump house main service disconnect, and a pole-mounted
+   3XFMR-FIRE. E096 (PDF p. 67) shows 3XFMR-FIRE (112.5kVA, 4.16kV to
+   480/277V) with Ameren fuse cutouts ("type unknown"), a wall-mounted Ameren
+   revenue meter, a 200A main, the two pump controllers, and a 2kVA control
+   transformer. No generator or ATS is drawn on E096. The drawings do not say
+   which buildings the fire pump serves.
+
+12. N NORMAL-POWER SOURCES AS DRAWN (UPSTREAM TRACE)
+   Two Ameren overhead services feed the N-side boards in this set:
+   - E025 (PDF p. 1): Ameren service, fuse cutouts, revenue meter, then
+     3SW-0700 (600A, 4.16kV, 3-wire, metal-enclosed, 50kAIC), which feeds
+     3XFMR-0022 (2000kVA; SWBD #2, E027), 3XFMR-0023 (1000kVA; SWBD #1, E041),
+     and 3XFMR-0700 (2000kVA, 480V; 3ESG-0700). Sheets E027 to E040 are titled
+     under 3XFMR-0022 and E041 to E050 under 3XFMR-0023.
+   - E058 (PDF p. 34) and E107 (PDF p. 71): Ameren service, 400A fused
+     disconnect 3PP-0001-FUDS01, revenue meter, then 3SWBD-0008 (labeled
+     "MSB-4.16kV NEMA 3R enclosed switchboard" on E001), which feeds 3XFMR-0030
+     (1500kVA; SWBD #5, 1600A, 480/277V, "BUILDING N = RM N1100A") and
+     3XFMR-0034 (2000kVA; SWBD #9, answer 11). E058's revision 3 (10-16-25,
+     "Updated per CC 4944226") clouds the service entrance through 3SWBD-0008
+     and 3PP-0002-FUDS02, and the feeder from 3SWBD-0008 to 3XFMR-0034 and
+     its DS01 disconnect.
+   N ATS normal sources as drawn: ATS01 from DP-5 (E028 to E063); ATS02, ATS05,
+   and ATS-N3-EB from DP-7 (E032 to E064, E067, E069); ATS07 from DP-10 (E047
+   to E068); 3GEN-0015-ATS08 from SWBD #5 breaker 1 (E058 to E059). DP-5, DP-7,
+   and DP-8 trace to SWBD #2 and DP-10 to SWBD #1, so these all trace to
+   3SW-0700. No reviewed N sheet references 3XFMR-0021 or SWBD #6, so the
+   drawings show no N dependency on the S/V normal source. The dependency that
+   is drawn runs the other way (answer 10).
+
+13. E001 CALLOUT TO MSOL SHEET CROSS-REFERENCE (PDF PAGES IN PARENTHESES)
+   - 3XFMR-0001 / SWBD PP-T: E084 to E088, E090 to E093, and E095 (pp. 56-64
+     and 66; E095 is blank). E089 is absent. E084 carries a cam-lok-box
+     continuation note, "SEE DRAWING 15-039-E001 HVAC"; none of E001's
+     cam-lok labels mentions HVAC.
+   - 3PAN-T-XXXX, 3PAN-T-XXX1, and 3XFMR-T-XXXX (E001, near BLDG T VALVE
+     HOUSE): E084 (p. 56), which also shows 3PAN-T-XXX2 at a guard shack.
+     E001's guard-shack tag 3PAN-GS-0001 appears nowhere in the MSOL set.
+   - 3XFMR-0002 / SWBD 7: E104 (p. 70), where it is relabeled 3XFMR-0381;
+     E001 still shows 3XFMR-0002.
+   - 3XFMR-0021 / SWBD 6: E073 (p. 49); E075 (p. 50, blank); E077 (p. 51,
+     Building S panel); E078 (p. 52, Building V).
+   - 3XFMR-0022 / SWBD 2: E027 to E040 (pp. 3-16; E039 and E040 blank).
+   - 3XFMR-0023 / SWBD 1: E041 to E050 (pp. 17-26; E049 and E050 blank).
+   - 3XFMR-0030 / SWBD 5: E058 to E061 (pp. 34-37; E060 and E061 blank).
+   - 3XFMR-0031 / PP-1: E082 and E083 (pp. 54-55), both blank. E045 (p. 21)
+     also carries a "PP-1/PP-2" title, under 3XFMR-0023; the set does not say
+     whether it is the same PP-1.
+   - 3XFMR-0700 / ESG-0700 / 3SW-0700: E025 (p. 1); E051 to E057 (pp. 27-33;
+     E056 and E057 blank).
+   - 3XFMR-0034 / 3SWBD-0008 / 3SWBD-0009: E058 (p. 34), E107 (p. 71).
+   - 3XFMR-FIRE: E096 (p. 67).
+   - 3GEN-0015 / ESG-01: E062 (p. 38); ATS sheets E063 to E069 (pp. 39-45);
+     E070 to E072 (pp. 46-48) blank. 3GEN-0015-ATS08 is on E058 and E059
+     (pp. 34-35).
+   - 3GEN-0003: E058 (p. 34); ATS sheets E108 to E111 absent.
+   - 3GEN-0050-TEMP / CAMLOCK BOX #4: E094 (p. 65).
+   - 3GEN-002N: E073, E028, E102 and E103 (answer 9).
 
 WHAT THIS MEANS FOR THE SEPARATION
 - The documented S/V normal-power tie is upstream at 3XFMR-0021 / SWBD #6.
+  E078 places SWBD #6 "within Bldg P," and SWBD #6 also feeds a branch toward
+  Bldg P (E073); the drawings do not say who owns Bldg P.
 - The supplied S/V normal one-lines do not document the emergency-power tie
-  described in the earlier project narrative.
+  described in the earlier project narrative. The one drawn lead is the
+  3GEN-002N tag (E073 ATS08, E028 ATS10); the sheets that would show what it
+  serves (E099, E101) are not in the set.
+- Three drawn items could cross the planned ownership line and cannot be
+  settled from this set:
+  (a) 3GEN-002N, tied by tag to SWBD #6 (S/V) and to 3PAN-0378, which is fed
+      from N's DP-5. If one generator serves both ATSs (inference), it is a
+      shared emergency source across the line.
+  (b) The N-to-S normal-power ties: DP-5 to 3PAN-0378 in the S mezzanine
+      (E028), and SWBD #5 via 3PAN-0055 to the "future 125A panel S BLDG"
+      (E058). They run from N toward S; no S-to-N tie was found.
+  (c) The docking-station ATSs 3GEN-0003-ATS01 to ATS04. Their normal source
+      (3SWBD-0009) shares an Ameren service and meter (3SWBD-0008) with N's
+      SWBD #5, and their loads are on absent sheets (E108 to E111).
 - The 750kW 3GEN-0015 is drawn as an N-building source. Its nameplate rating
   alone is not evidence that it can serve V or has spare capacity.
 - The S and V branch markings are not measured demand or proof of available
   capacity; preserve the 800A / 300A S-device markings until their meaning is
   confirmed from the gear details or field labels.
+- E001 does not letter its buildings, so it cannot by itself map yard
+  equipment to S, V, or N. A building-lettered plan or a leader legend is
+  needed before ownership can be mapped to the site plan.
 - For a meeting: "The drawings establish a shared normal source for S and V,
-  but they do not establish a shared S/V emergency source. The 750kW genset
-  shown is assigned to N-system ATSs. ATS07's emergency source and rating are
-  inconsistent between the plant and ADC expansion one-lines."
+  but not a shared S/V emergency source. A generator tagged 3GEN-002N is tied
+  by tag to SWBD #6 and to a panel fed from N's DP-5, but its ATS sheets are
+  not in the set. The 750kW genset is assigned to N-system ATSs. ATS07's
+  emergency source and rating are inconsistent between the plant and ADC
+  expansion one-lines."
 
 DRAWING LIMITS / UNRESOLVED FROM THIS SET
-- Drawing 15-039-E076 (S feeder continuation) is referenced but absent from the
-  supplied PDF. Drawing 15-039-E099 is also referenced by 15-039-E073 for
-  3GEN-0021N-ATS08, but was not found in the supplied set.
+- Sheets referenced by the set but absent from it: E074 (SWBD #6 feeder to
+  Bldg P), E076 (S feeder continuation), E089 (referenced from E091), E099
+  (3GEN-002N-ATS08), E101 (3GEN-002N-ATS10), and E108 to E111
+  (3GEN-0003-ATS01 to ATS04). Numbers also missing from the sequence, with no
+  reference found in the sheets reviewed: E080, E081, E097, E098, E100, E105,
+  E106.
+- Blank "future" placeholder sheets, with no equipment drawn: E039, E040,
+  E049, E050, E056, E057, E060, E061, E070 to E072, E075, E079, E082, E083,
+  E095, E102, and E103. Those that bear on S/V are E075 (3XFMR-0021) and
+  E102/E103 (3GEN-002N).
 - The reviewed S/V sheets do not establish S/V emergency ATS locations, an
   S/V generator source, or whether any emergency feeders cross the S/V line.
-- ATS07 differs across the drawings: E068 shows 1000A and generator ESG01;
-  E-50 shows 150A and a portable generator. E062's ATS07 branch is also
-  marked 400A / 150A.
+  The 3GEN-002N lead (answer 9) is unresolved: its ATS sheets are absent, its
+  generator sheets are blank, and its rating, location, and loads are not
+  given. 3GEN-002N-ATS08 (E073) is a different tag from 3GEN-0015-ATS08
+  (E058, E059).
+- E001 does not say which footprint is S, V, or N: buildings are not lettered
+  and leader targets are undefined. "BUILDING XY" (E001) and "X/Y" (E102,
+  E103) are not defined, and no sheet equates them with S or V. "S BLDG"
+  (E058), "BUILDING S MEZZANINE" (E028), and "S-Dock" (E058) are likewise not
+  tied to the divestiture's Building S.
+- SWBD #6's location is inconsistent: E078 says "within Bldg P," while E001's
+  SWBD#6 leader lands on a small yard footprint beside the 3XFMR-0021 pad.
+  3XFMR-0021's upstream source is not traced: E073 points to E084, which draws
+  3XFMR-0001 and not 3XFMR-0021.
+- E001 revision 4 is titled "Generator docking station as-builts," but its
+  general note 1 says the sheet is not to be considered as-built or
+  as-recorded. Its keynote 1 cites a "DETAIL 5 BELOW" that is not on the
+  supplied sheet, and the abbreviation "EPP" (four labels) is not defined.
+- E001 draws 3GEN-0015 twice (a footprint at the lower left, and one in the
+  lower middle with CAM LOK BOX #2 and #3; the 3GEN-0015-ESG-01 footprint sits
+  between them), and cam-lok box numbers repeat across locations; the set
+  does not explain this. It also does not say what unit, if any, is installed
+  at the 3GEN-0003 footprint.
+- Sheet inconsistencies noted: E041's body caption reads "SWBD #2 ONE LINE
+  DIAGRAM" although its title block and board are 3XFMR-0023 / SWBD #1; E025
+  sends 3ESG-0700 to E049 (a blank placeholder) although 3ESG-0700 is drawn
+  on E051; E104 relabels 3XFMR-0002 as 3XFMR-0381 while E001 still shows
+  3XFMR-0002; E068's title block still reads "FUTURE."
+- ATS07 differs across the drawings: E068 shows 100A and generator ESG01;
+  E-50 shows 150A and a portable generator. E062's ATS07 feeder breaker is
+  marked 400AF / 150AT, which agrees with E-50.
 - The 10-055-E100 description carried in the earlier draft calls
   3GEN-0015-ESG01 an 800A switchboard; 15-039-E062 shows it as 1200A. Treat
   this as a drawing discrepancy, not as a verified equipment rating.
-- General notes on the one-lines state that they are not as-built and require
-  field verification. Ownership, actual equipment condition, current
-  configuration, loads, and generator spare capacity are not established by
-  these drawings.
+- General notes on the one-lines and on E001 state that they are not as-built
+  and require field verification. Ownership, actual equipment condition,
+  current configuration, loads, and generator spare capacity are not
+  established by these drawings.
+
+CORRECTIONS TO EARLIER VERSIONS (2026-11-06)
+- ATS07's rating on E068 (PDF p. 44) is 100A, not 1000A. Earlier versions of
+  this file, PROJECT_STATUS.txt, and the draft carried "1000A" in error. The
+  actual conflict is 100A (E068) against 150A (E-50); E062's feeder breaker
+  (400AF / 150AT) agrees with 150A.
+- The tag on E073 is 3GEN-002N-ATS08, not "3GEN-0021N-ATS08."
+- E073 labels SWBD #6 "2000AMP, 480/277V, 3-phase, 4-wire, 100kAIC MINIMUM."
+  "Minimum" qualifies the AIC rating, not the 2000A, so "2000A minimum" in
+  earlier versions was wrong.
+- PROJECT_STATUS.txt said text extraction returned nothing on the 71 pages.
+  Normal extraction does return nothing, but the labels are PDF annotations
+  and can be read with PyMuPDF (see README.md).
 
 SOURCE INDEX
 MSOL-combined (1).pdf page numbers are 1-based.
+- PDF p. 1: 15-039-E025 — Building N MV service, 3SW-0700 one-line.
+- PDF p. 3: 15-039-E027 — 3XFMR-0022 / SWBD #2 one-line.
+- PDF p. 4: 15-039-E028 — 3XFMR-0022 / DP-5 one-line; panel 3PAN-0378 in the
+  "Building S Mezzanine" room and its 3GEN-002N-ATS10 branch. Revision 1
+  "Issued for construction project 19-2019 - Phase C" 05-04-20; revision 2
+  "Updated via field observation" 11-15-22.
+- PDF p. 8: 15-039-E032 — DP-7 one-line (normal source of ATS02, ATS05, and
+  ATS-N3-EB).
+- PDF p. 17: 15-039-E041 — 3XFMR-0023 / SWBD #1 one-line.
+- PDF p. 23: 15-039-E047 — DP-10 one-line (ATS07 normal source).
+- PDF p. 34: 15-039-E058 — 3SWBD-0008 service; SWBD #5 and SWBD #9 one-line;
+  3PAN-0055 and its "future 125A panel S BLDG" branch.
+- PDF p. 35: 15-039-E059 — NMCC one-line (3GEN-0015-ATS08).
 - PDF p. 38: 15-039-E062 — 3GEN-0015 / ESG01 one-line.
+- PDF p. 39: 15-039-E063 — 3GEN-0015-ATS01 one-line (ATS-sheet pattern).
 - PDF p. 44: 15-039-E068 — ATS07 one-line.
 - PDF p. 45: 15-039-E069 — ATS-N3-EB one-line.
-- PDF p. 49: 15-039-E073 — 3XFMR-0021 / SWBD #6 one-line, S and V feeder
-  references.
+- PDF p. 49: 15-039-E073 — 3XFMR-0021 / SWBD #6 one-line, V, S, Bldg P, and
+  3GEN-002N-ATS08 feeder references. Revision 0 "Original drawing creation"
+  04-06-18; revision 1 "Issued for construction project 19-2019" 08-26-19;
+  title block drawn 12-04-18, approved 12-19-18. General notes 2 and 3 say
+  conduit, conductor insulation, ground-conductor, and motor sizes were not
+  verified.
+- PDF p. 50: 15-039-E075 — 3XFMR-0021 blank "future" placeholder.
 - PDF p. 51: 15-039-E077 — Building S panel 3PAN-XXX1 one-line.
 - PDF p. 52: 15-039-E078 — Building V one-line.
+- PDF p. 56: 15-039-E084 — 3XFMR-0001 / SWBD PP-T one-line.
+- PDF p. 67: 15-039-E096 — 3XFMR-FIRE fire house one-line.
+- PDF pp. 68-69: 15-039-E102, E103 — 3GEN-002N blank "future" placeholders.
+- PDF p. 70: 15-039-E104 — 3XFMR-0002 (relabeled 3XFMR-0381) one-line.
+- PDF p. 71: 15-039-E107 — 3SWBD-0008 one-line.
+- Repo file CherokeeSiteElect.pdf (one page): 15-039-E001 — Cherokee Plant
+  Electrical Site Location Plan, revision 4, 06-16-26.
 - Separate file: 18-2038-E-50+SINGLE+LINE+DIAGRAM.PDF — ADC Clinical Expansion
   single-line; conflicting ATS07 emergency-source note.
 
