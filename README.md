@@ -7,6 +7,8 @@ V and N buildings go to NewCo; S stays with RemainCo. Target: a separate generat
 
 | File | What it is |
 |---|---|
+| [PROJECT_STATUS.txt](PROJECT_STATUS.txt) | Running status, confirmed findings, assumptions, open questions, and next steps |
+| [DRAWING_ANSWERS.txt](DRAWING_ANSWERS.txt) | Direct answers supported by the reviewed plant one-lines, with sheet/page citations and drawing conflicts |
 | [SV_Emergency_Power_Separation_DRAFT.md](SV_Emergency_Power_Separation_DRAFT.md) | How S/V and N are tied together now, concept one-lines, phased scope, code checklist, data still needed |
 | [SV_Emergency_Load_List_and_Sizing.xlsx](SV_Emergency_Load_List_and_Sizing.xlsx) | Load list, generator/ATS sizing, circuit move list (yellow cells = inputs) |
 
@@ -14,6 +16,7 @@ V and N buildings go to NewCo; S stays with RemainCo. Target: a separate generat
 
 | File | Dwg No. | Title |
 |---|---|---|
+| [MSOL-combined (1).pdf](<MSOL-combined (1).pdf>) | 71-sheet combined set, drawing numbers range 15-039-E025–E107 | Plant one-lines, including S/V normal-power references and N standby generator/ATS drawings; see [DRAWING_ANSWERS.txt](DRAWING_ANSWERS.txt) |
 | [18-2038-E-50+SINGLE+LINE+DIAGRAM.PDF](18-2038-E-50+SINGLE+LINE+DIAGRAM.PDF) | 18-2038-E-50 | ADC Clinical Expansion single line (DP-10, ATS07, PAN10/PAN11, UPS 3PS-0002) |
 | [DP_5A.PDF](DP_5A.PDF) | 0001-E64 | DP-5A Electrical Room #1023 one-line |
 | [N3ADCeastBayThirdFloor_power.PDF](N3ADCeastBayThirdFloor_power.PDF) | 10-055-E100 | N3 ADC electrical plan, east bay, 3rd floor (ESG01, ATSs, SPP/SRP/PP/RP) |
@@ -27,4 +30,4 @@ V and N buildings go to NewCo; S stays with RemainCo. Target: a separate generat
 | [DeltaV/plantLANSwitch.PDF](DeltaV/plantLANSwitch.PDF) | 04-073-E101 | Plant LAN switch, Office N3039 |
 | [DeltaV/DeltaV_Device_Register.docx](DeltaV/DeltaV_Device_Register.docx) | | Device register. **Contains errors; don't rely on it.** |
 
-S and V building prints are not in the repo yet.
+The combined MSOL set contains S/V normal-power feeder references (15-039-E073, E077, and E078). It does not, in the reviewed sheets, establish the S/V emergency-power arrangement. See [DRAWING_ANSWERS.txt](DRAWING_ANSWERS.txt) for findings and limitations.

@@ -1,0 +1,131 @@
+DRAWING-BASED ANSWERS
+Cherokee plant | Prepared 2026-11-06
+
+PURPOSE
+Use this as a factual briefing from the drawings reviewed so far. It is an
+answer sheet, not a list of questions to take back to the project team. State
+what a drawing shows, cite the sheet, and distinguish it from field-verified
+conditions. These drawings are not certified as-builts.
+
+THE SHORT ANSWER
+The one-lines show S and V on the same upstream normal-power system: 3XFMR-0021
+feeds SWBD #6, which has a 200A branch to Building V and a branch toward
+Building S labeled 800A, 3-pole, with 300A also shown at the protective device.
+That establishes a shared normal source in the drawing set. It does not
+establish that S and V share emergency generation. The 750kW generator
+shown in the set is 3GEN-0015, whose ESG01 board feeds multiple N-building ATSs;
+the reviewed sheets do not show it feeding S or V.
+
+ANSWERS SUPPORTED BY THE DRAWINGS
+
+1. S AND V NORMAL-POWER ARRANGEMENT
+   Drawing 15-039-E073 (PDF page 49) shows 3XFMR-0021, rated 1500kVA, supplying
+   SWBD #6, shown as 2000A minimum at 480/277V. The board has a 200A feeder to
+   Building V (continuation 15-039-E078). The branch toward Building S
+   (continuation 15-039-E076) is labeled 800A, 3-pole, with 300A also shown at
+   the protective device. Report both markings as drawn; do not describe the
+   branch as 800A of usable capacity. The drawings show separate building
+   feeders downstream of a common transformer/switchboard. That is a common
+   normal source, not proof of a shared emergency source.
+
+2. V-BUILDING NORMAL DISTRIBUTION
+   Drawing 15-039-E078 (PDF page 52) shows the SWBD #6 feeder serving panel
+   3PAN-V-0001 / DP-1, rated 200A, 480/277V, 3-phase, 4-wire. The listed
+   downstream loads include AHUs, cooling units, lighting, and general building
+   loads. This sheet shows normal distribution; it does not identify a V
+   generator or emergency ATS.
+
+3. S-BUILDING NORMAL DISTRIBUTION
+   Drawing 15-039-E073 routes a branch to Building S via drawing 15-039-E076.
+   The branch device is marked 800A, 3-pole, with 300A also shown at the
+   protective device. That continuation sheet is not present in the supplied
+   71-page PDF. Drawing 15-039-E077 (PDF page 51) is a Building S panel
+   3PAN-XXX1, rated 225A, 480/277V, 3-phase, 4-wire. Its listed loads include
+   machine-shop equipment, an AHU, receptacles, a battery charger, and other
+   building loads. The missing E076 sheet prevents a complete trace of the
+   feeder and upstream S distribution from this PDF alone.
+
+4. S/V EMERGENCY POWER IS NOT ESTABLISHED BY THESE SHEETS
+   The S/V sheets cited above establish their normal-power arrangement, but do
+   not show an S/V shared generator or emergency ATS. The previously reported
+   shared S/V emergency arrangement remains unverified against the supplied
+   drawings. Do not equate the common normal source with a common standby
+   source.
+
+5. BUILDING N STANDBY GENERATOR
+   Drawing 15-039-E062 (PDF page 38) identifies 3GEN-0015 as a 750kW standby
+   generator feeding switchboard 3GEN-0015-ESG01, shown as 1200A,
+   480/277V, 3-phase, 4-wire, 25kAIC. Its outgoing feeders serve multiple
+   ATSs, including ATS07 and ATS-N3-EB. This establishes the source shown on
+   that one-line; it does not establish current field status, ownership, or
+   unused generator capacity.
+
+6. ATS-N3-EB SOURCE
+   Drawing 15-039-E069 (PDF page 45) shows ATS-N3-EB's normal source as DP-7
+   and its emergency source as 3GEN-0015-ESG01. The ATS is labeled 400A,
+   480V, 3-phase, 3-wire, 3-pole, and "not a Level 1" transfer switch. Its
+   load side feeds panel SPP-N3-EB. This is N-system evidence, not evidence
+   that the N generator serves S or V.
+
+7. ATS07 SOURCE CONFLICT
+   The drawings conflict:
+   - 15-039-E068 (PDF page 44) shows ATS07's normal source as DP-10 and its
+     emergency source as 3GEN-0015-ESG01. It labels ATS07 1000A at 480V,
+     3-phase, 3-wire, 3-pole, and "not a Level 1" transfer switch. The shown
+     emergency panel supplies loads including AHU/exhaust equipment and UPS
+     distribution.
+   - 18-2038-E-50, "ADC Clinical Expansion Single Line Diagram," labels ATS07
+     150A at 480V, 3-phase, 3-wire, with emergency power from an existing
+     portable generator provided by others and located by the existing
+     exterior generator. The feeder branch to ATS07 on 15-039-E062 also has
+     400A and 150A markings.
+   The drawings conflict on both ATS07's emergency source and rating. They
+   alone do not reconcile whether this reflects revisions, separate equipment,
+   or a field change. Report both references and do not declare the current
+   source or rating until the ATS identity and installation are checked.
+
+WHAT THIS MEANS FOR THE SEPARATION
+- The documented S/V normal-power tie is upstream at 3XFMR-0021 / SWBD #6.
+- The supplied S/V normal one-lines do not document the emergency-power tie
+  described in the earlier project narrative.
+- The 750kW 3GEN-0015 is drawn as an N-building source. Its nameplate rating
+  alone is not evidence that it can serve V or has spare capacity.
+- The S and V branch markings are not measured demand or proof of available
+  capacity; preserve the 800A / 300A S-device markings until their meaning is
+  confirmed from the gear details or field labels.
+- For a meeting: "The drawings establish a shared normal source for S and V,
+  but they do not establish a shared S/V emergency source. The 750kW genset
+  shown is assigned to N-system ATSs. ATS07's emergency source and rating are
+  inconsistent between the plant and ADC expansion one-lines."
+
+DRAWING LIMITS / UNRESOLVED FROM THIS SET
+- Drawing 15-039-E076 (S feeder continuation) is referenced but absent from the
+  supplied PDF. Drawing 15-039-E099 is also referenced by 15-039-E073 for
+  3GEN-0021N-ATS08, but was not found in the supplied set.
+- The reviewed S/V sheets do not establish S/V emergency ATS locations, an
+  S/V generator source, or whether any emergency feeders cross the S/V line.
+- ATS07 differs across the drawings: E068 shows 1000A and generator ESG01;
+  E-50 shows 150A and a portable generator. E062's ATS07 branch is also
+  marked 400A / 150A.
+- The 10-055-E100 description carried in the earlier draft calls
+  3GEN-0015-ESG01 an 800A switchboard; 15-039-E062 shows it as 1200A. Treat
+  this as a drawing discrepancy, not as a verified equipment rating.
+- General notes on the one-lines state that they are not as-built and require
+  field verification. Ownership, actual equipment condition, current
+  configuration, loads, and generator spare capacity are not established by
+  these drawings.
+
+SOURCE INDEX
+MSOL-combined (1).pdf page numbers are 1-based.
+- PDF p. 38: 15-039-E062 — 3GEN-0015 / ESG01 one-line.
+- PDF p. 44: 15-039-E068 — ATS07 one-line.
+- PDF p. 45: 15-039-E069 — ATS-N3-EB one-line.
+- PDF p. 49: 15-039-E073 — 3XFMR-0021 / SWBD #6 one-line, S and V feeder
+  references.
+- PDF p. 51: 15-039-E077 — Building S panel 3PAN-XXX1 one-line.
+- PDF p. 52: 15-039-E078 — Building V one-line.
+- Separate file: 18-2038-E-50+SINGLE+LINE+DIAGRAM.PDF — ADC Clinical Expansion
+  single-line; conflicting ATS07 emergency-source note.
+
+This is a drawing interpretation aid, not an engineering approval or
+field-verified record.

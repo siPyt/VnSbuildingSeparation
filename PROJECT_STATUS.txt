@@ -1,0 +1,164 @@
+V / S BUILDING EMERGENCY POWER SEPARATION - RUNNING RECORD
+Last updated: 2026-11-06
+
+PURPOSE
+Keep the current status, evidence, assumptions, open questions, and next steps
+in one place. Update the snapshot as work progresses and append dated milestones
+to the history. Record corrections rather than silently treating assumptions as
+facts. This is a working record, not an approved engineering design.
+
+WHERE WE ARE
+- A draft separation scope and load/sizing workbook already exist.
+- The newly supplied MSOL-combined (1).pdf contains 71 pages.
+- The set was scanned by sheet-title contact sheets and relevant S/V and N
+  one-lines were reviewed. Drawing-based answers are in DRAWING_ANSWERS.txt.
+- S/V normal feeder references were found: 3XFMR-0021 / SWBD #6 shows a 200A
+  branch to V and an S branch device marked 800A, 3-pole, with 300A also
+  shown. Do not treat the 800A label alone as available capacity.
+- The set does not establish the reported shared S/V emergency source.
+- The set shows a 750kW N standby generator, 3GEN-0015, with a 1200A ESG01
+  board on drawing E062; other N prints show ATS07 / ATS-N3-EB connections.
+- Drawing discrepancies need to remain explicit: ATS07's source and rating
+  differ between E068 and 18-2038-E-50; ESG01 is labeled 800A in the earlier
+  E100-based draft and 1200A on E062.
+- No complete field-verified S/V source trace, N dependency trace, or final
+  equipment sizing has been established.
+
+PROJECT BASIS - FROM THE EXISTING DRAFT, NOT INDEPENDENTLY VERIFIED HERE
+- V and N buildings go to NewCo; S remains with RemainCo.
+- The stated target is separate generator/transfer equipment per building,
+  with no emergency or standby conductors crossing the S/V ownership line.
+- The draft also raises feeding V standby loads from N as an alternative.
+  That is an option to evaluate, not an approved change to the target.
+- The reported existing S/V arrangement is one generator and one ATS feeding
+  both buildings. This has not yet been confirmed against S/V drawings.
+- The draft assumes the existing generator and ATS stay with S. Their actual
+  locations and deal ownership still need confirmation.
+- Load classifications and code applicability remain for the engineer of
+  record to verify; the draft's compliance concerns are not confirmed findings.
+
+CONFIRMED IN THIS SESSION
+Sources: MSOL-combined (1).pdf (page numbers below are 1-based) and the separate
+18-2038-E-50+SINGLE+LINE+DIAGRAM.PDF.
+- PDF page 38, 15-039-E062: 3GEN-0015 is labeled 750kW; ESG01 is labeled
+  1200A, 480/277V, 3-phase, 4-wire, 25kAIC.
+- PDF page 44, 15-039-E068: ATS07 normal source DP-10; emergency source
+  3GEN-0015-ESG01; ATS marked 1000A, 480V, 3-phase, 3-wire, 3-pole, not
+  Level 1.
+- PDF page 45, 15-039-E069: ATS-N3-EB normal source DP-7; emergency source
+  3GEN-0015-ESG01; ATS marked 400A, 480V, 3-phase, 3-wire, 3-pole, not
+  Level 1.
+- PDF page 49, 15-039-E073: 3XFMR-0021 is labeled 1500kVA, supplying SWBD #6
+  (2000A minimum, 480/277V); the one-line shows a 200A branch to V and a
+  branch toward S marked 800A, 3-pole, with 300A also shown at the protective
+  device. S continuation E076 is referenced but absent from the PDF.
+- PDF page 51, 15-039-E077: Building S panel 3PAN-XXX1, 225A,
+  480/277V, 3-phase, 4-wire.
+- PDF page 52, 15-039-E078: Building V panel 3PAN-V-0001 / DP-1, 200A,
+  480/277V, 3-phase, 4-wire; the sheet shows normal distribution loads.
+- Separate 18-2038-E-50: ATS07 is described as having emergency power from an
+  existing portable generator provided by others and is rated 150A. This
+  conflicts with E068's ESG01 source and 1000A ATS rating. E062 also marks the
+  ATS07 feeder 400A / 150A.
+- These findings establish drawn topology and labels, not field condition,
+  equipment ownership, generator spare capacity, or code compliance.
+- Direct text extraction returned no text on the 71 pages. Key title blocks and
+  relevant one-lines were reviewed visually; the set has not been fully
+  transcribed, and OCR or further manual review may be needed for other sheets.
+- 15-039-E099, referenced from E073 for 3GEN-0021N-ATS08, was not found in the
+  supplied PDF. The ATS08 source trace remains incomplete.
+
+N BUILDING NOTES / DRAWING DISCREPANCIES
+Source: MSOL sheets E062/E068/E069 and existing N drawings; specific claims in
+the draft should be reconciled against this new information.
+- MSOL E062 identifies 3GEN-0015 as a 750kW standby generator and ESG01 as a
+  1200A board. Older 10-055-E100 data in the draft describes ESG01 as 800A;
+  actual equipment rating remains to be verified.
+- MSOL E069 shows ATS-N3-EB normal from DP-7 and emergency from ESG01.
+- MSOL E068 shows ATS07 normal from DP-10 and emergency from ESG01, but
+  18-2038-E-50 shows an existing portable generator. Source discrepancy open.
+- Ownership, physical location, current status, actual connected loads, and
+  generator capacity available for additional loads remain unverified.
+- The recorded ATS07 downstream chain is:
+  ATS07 -> PAN10 -> XFMR06 -> PAN11 -> UPS 3PS-0002 -> 3PAN-UP02.
+- DP-5, DP-7, DP-8, and DP-10 need upstream tracing through the plant one-lines
+  to identify any dependency on equipment RemainCo retains.
+- Battery-backed egress lighting is described for N3 Area 3 only.
+  That is not proof that all of N's egress lighting is battery-backed.
+- DeltaV/plant-network dependencies are a parallel separation item.
+
+IMPORTANT SOURCE CAUTIONS
+- README.md and the draft flag DeltaV\DeltaV_Device_Register.docx as containing
+  errors. Do not rely on it without checking the underlying drawings.
+- Drawing information, field conditions, and ownership are separate evidence.
+  A drawing label alone does not establish current conditions or deal ownership.
+- The workbook is an existing planning tool. Its entries and calculations have
+  not been audited in this session.
+
+OPEN QUESTIONS / DATA STILL NEEDED
+1. S/V emergency source, ATS sheets, inter-building emergency feeders, and
+   field configuration remain unidentified.
+2. S/V normal feeder continuation E076 and ATS08 continuation E099 are missing
+   from the supplied MSOL PDF.
+3. Reconcile the ATS07 emergency-source descriptions and ESG01 ratings across
+   the differing drawing sets/revisions.
+4. Actual nameplates, field locations, ownership, connected loads, demand/load
+   measurements, and generator capacity available for additional load remain
+   unverified.
+5. Egress-lighting and fire-alarm sources, and whether a fire pump is present
+   or shared, are not established by the reviewed S/V drawings.
+6. Cutover timing and temporary-service arrangements require project records.
+7. Field verification and engineering review are required before equipment
+   selection or final compliance conclusions.
+
+EXECUTIVE POSITION - PRELIMINARY, NOT NEW DRAWING VERIFICATION
+- This is an operational-independence project, not simply a generator purchase:
+  the electrical supply and operating arrangements must match the new ownership
+  boundaries while maintaining critical-load continuity.
+- If the reported shared S/V generator/ATS arrangement is confirmed, separation
+  must address ownership, feeder paths, normal-source sensing, and load coverage.
+- N must be included in the dependency review. Building-local distribution does
+  not establish that its upstream normal and backup sources are independent.
+- Load classification, measured demand, and starting/transfer requirements must
+  drive equipment selection. Neither the 750kW generator label nor switchboard
+  and ATS ratings establish spare generator capacity.
+- The transition plan must address shared-service duration, equipment access,
+  maintenance/fuel responsibilities, outages, and any temporary backup.
+- Recommended next milestone: an owner-labeled source-to-load dependency map
+  for normal and backup power, supported by field checks and a verified load
+  inventory. Use that evidence to compare separation options and plan cutover.
+
+NEXT STEPS
+1. Use DRAWING_ANSWERS.txt to report supported S/V normal feeds and N generator
+   facts, keeping drawing conflicts visible.
+2. Locate E076, E099, and current S/V emergency ATS/source drawings.
+3. Trace normal and emergency sources to loads and flag ownership-boundary
+   crossings.
+4. Reconcile the draft and workbook against current drawings; keep unsupported
+   sizing and ownership values TBD.
+5. Gather field/nameplate/load/ownership evidence for unresolved items.
+
+WORKING FILES
+- PROJECT_STATUS.txt: this running record.
+- DRAWING_ANSWERS.txt: direct drawing-supported answers and sheet citations.
+- SV_Emergency_Power_Separation_DRAFT.md: scope, concepts, assumptions, data gaps.
+- SV_Emergency_Load_List_and_Sizing.xlsx: load list, sizing, circuit move list.
+- MSOL-combined (1).pdf: newly supplied 71-page plant drawing set.
+- README.md: existing file/drawing index and source cautions.
+
+HISTORY
+2026-11-06 - Initial MSOL spot-check confirmed 71 pages; subsequent title-block
+             review located the S/V normal feeders and N generator one-lines.
+2026-11-06 - Created this running record at the user's request. Separated
+             directly checked evidence from inherited draft statements.
+             No electrical design or workbook sizing changes made in this step.
+2026-11-06 - Prepared a preliminary executive summary from the existing record.
+             Added the executive position above. No additional drawing pages,
+             equipment sizing, costs, or compliance conclusions were verified.
+2026-11-06 - Reviewed relevant MSOL sheets E062/E068/E069/E073/E077/E078 and
+             separate 18-2038-E-50. Added drawing answers and documented ATS07
+             source and ESG01 rating discrepancies. No field verification or
+             equipment sizing performed.
+2026-11-06 - Committed and pushed the MSOL drawing set, DRAWING_ANSWERS.txt,
+             this status record, and the README/draft updates to GitHub
+             (siPyt/VnSbuildingSeparation, main).
