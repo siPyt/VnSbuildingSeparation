@@ -1,0 +1,9 @@
+* text=auto
+
+# Drawings and Office files are binary - never convert line endings
+*.pdf binary
+*.PDF binary
+*.png binary
+*.PNG binary
+*.xlsx binary
+*.docx binary

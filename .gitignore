@@ -1,0 +1,10 @@
+# Exact duplicate of this folder (left over from an unzip) - not tracked
+/prints/
+
+# Office lock / temp files
+~$*
+*.tmp
+
+# Windows / OneDrive clutter
+desktop.ini
+Thumbs.db
